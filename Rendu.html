@@ -5,30 +5,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="main.css">
     <title>Rendu Site</title>
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li>Category</li>
-            <li>About</li>
-            <li>Contact</li>
-        </ul>
-        <input>
+    <nav class="nav">
+        <div class="nav--logo">
+            <h2 class="nav--logo__title">Monito</h2>
+            <p class="nav--logo_slogan">Pets for Best</p>
+        </div>
 
+        <ul class="nav--link">
+            <li class="nav--link__item">Home</li>
+            <li class="nav--link__item">Category</li>
+            <li class="nav--link__item">About</li>
+            <li class="nav--link__item">Contact</li>
+        </ul>
+
+        <input type="text"><i class="fa-solid fa-magnifying-glass"></i>Search something here !</input>
+        
+        <button class="nav__button">Login</button>
     </nav>
 
-    <section>
-        <section>
+    <header class="header">
+        <div class="header--gauche">
+            <h1 class="header--gauche__title">One More Friend</h1>
+            <h2 class="header--gauche__subtitle">Thousands More Fun !</h2>
+            <p class="header--gauche__description">Having a pets means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs !</p>
+            <div class="header--gauche--button">
+                <button class="header--gauche--button__view">View intro<i class="fa-solid fa-circle-play"></i></button>
+                <button class="header--gauche--button__explore">Explore Now</button>
+            </div>
+        </div>
+        <div class="header--droite">
+            <img class="header--droite__img" src="Images/img_header.png">
+        </div>
+    </header>
 
+    <section class="base">
+        <section class="base--pets">
+            <div class="base--pets--textandbutton">
+                <div class="base--pets--textandbutton--text">
+                    <p class="base--pets--textandbutton--text__title">Whats new ?</p>
+                    <h3 class="base--pets--textandbutton--text__paragraphe">Take A Look At Some Of Our Pets</h3>
+                </div>
+                <button class="base--pets--textandbutton__button">View more<i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="base--pets--allPets">
+                <div class="base--pets--allPets--OnePet">
+                    <img class="base--pets--allPets--OnePet__img" src="Images/Chien1.png">
+                    <div class="base--pets--allPets--OnePet--text">
+                        <h3 class="base--pets--allPets--OnePet--text__title">MO231 - Pomeranian White</h3>
+                        <div class="base--pets--allPets--OnePet--text--description">
+                            <p class="base--pets--allPets--OnePet--text--description--type">Gene: Male</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type__point">.</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type">Age : 02 months</p>
+                        </div>
+                        <p class="base--pets--allPets--OnePet--text__prix">6.900.000 VND</p>
+                    </div>
+                </div>
+
+                <div class="base--pets--allPets--OnePet">
+                    <img class="base--pets--allPets--OnePet__img" src="Images/Chien2.png">
+                    <div class="base--pets--allPets--OnePet--text">
+                        <h3 class="base--pets--allPets--OnePet--text__title">MO502 - Poodle Tiny Yellow</h3>
+                        <div class="base--pets--allPets--OnePet--text--description">
+                            <p class="base--pets--allPets--OnePet--text--description--type">Gene: Female</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type__point">.</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type">Age : 02 months</p>
+                        </div>
+                        <p class="base--pets--allPets--OnePet--text__prix">3.900.000 VND</p>    
+                    </div>
+                </div>
+
+                <div class="base--pets--allPets--OnePet">
+                    <img class="base--pets--allPets--OnePet__img" src="Images/Chien3.png">
+                    <div class="base--pets--allPets--OnePet--text">
+                        <h3 class="base--pets--allPets--OnePet--text__title">MO102 - Poodle Tiny Sepia</h3>
+                        <div class="base--pets--allPets--OnePet--text--description">
+                            <p class="base--pets--allPets--OnePet--text--description--type">Gene: Male</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type__point">.</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type">Age : 02 months</p>
+                        </div>
+                        <p class="base--pets--allPets--OnePet--text__prix">4.000.000 VND</p>    
+                    </div>
+                </div>
+
+                <div class="base--pets--allPets--OnePet">
+                    <img class="base--pets--allPets--OnePet__img" src="Images/Chien4.png">
+                    <div class="base--pets--allPets--OnePet--text">
+                        <h3 class="base--pets--allPets--OnePet--text__title">MO512 - Alaskan Malamute Grey</h3>
+                        <div class="base--pets--allPets--OnePet--text--description">
+                            <p class="base--pets--allPets--OnePet--text--description--type">Gene: Male</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type__point">.</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type">Age : 03 months</p>
+                        </div>
+                        <p class="base--pets--allPets--OnePet--text__prix">8.900.000 VND</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="base--pets--allPets">
+                <div class="base--pets--allPets--OnePet">
+                    <img class="base--pets--allPets--OnePet__img" src="Images/Chien5.png">
+                    <div class="base--pets--allPets--OnePet--text">
+                        <h3 class="base--pets--allPets--OnePet--text__title">MO231 - Pembroke Corgi Cream</h3>
+                        <div class="base--pets--allPets--OnePet--text--description">
+                            <p class="base--pets--allPets--OnePet--text--description--type">Gene: Male</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type__point">.</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type">Age : 03 months</p>
+                        </div>
+                        <p class="base--pets--allPets--OnePet--text__prix">7.900.000 VND</p>    
+                    </div>
+                </div>
+
+                <div class="base--pets--allPets--OnePet">
+                    <img class="base--pets--allPets--OnePet__img" src="Images/Chien6.png">
+                    <div class="base--pets--allPets--OnePet--text">
+                        <h3 class="base--pets--allPets--OnePet--text__title">MO502 - Pembroke Corgi Tricolor</h3>
+                        <div class="base--pets--allPets--OnePet--text--description">
+                            <p class="base--pets--allPets--OnePet--text--description--type">Gene: Female</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type__point">.</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type">Age : 02 months</p>
+                        </div>
+                        <p class="base--pets--allPets--OnePet--text__prix">9.000.000 VND</p>    
+                    </div>
+                </div>
+
+                <div class="base--pets--allPets--OnePet">
+                    <img class="base--pets--allPets--OnePet__img" src="Images/Chien7.png">
+                    <div class="base--pets--allPets--OnePet--text">
+                        <h3 class="base--pets--allPets--OnePet--text__title">MO102 - Pomeranian Grey</h3>
+                        <div class="base--pets--allPets--OnePet--text--description">
+                            <p class="base--pets--allPets--OnePet--text--description--type">Gene: Female</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type__point">.</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type">Age : 02 months</p>
+                        </div>
+                        <p class="base--pets--allPets--OnePet--text__prix">6.500.000 VND</p>  
+                    </div>
+                </div>
+
+                <div class="base--pets--allPets--OnePet">
+                    <img class="base--pets--allPets--OnePet__img" src="Images/Chien8.png">
+                    <div class="base--pets--allPets--OnePet--text">
+                        <h3 class="base--pets--allPets--OnePet--text__title">MO512 - Poodle Tiny Dairy Cow</h3>
+                        <div class="base--pets--allPets--OnePet--text--description">
+                            <p class="base--pets--allPets--OnePet--text--description--type">Gene: Male</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type__point">.</p>
+                            <p class="base--pets--allPets--OnePet--text--description--type">Age : 03 months</p>
+                        </div>
+                        <p class="pets--allPets--OnePet--text__prix">5.000.000 VND</p>
+                    </div>
+                </div>
+            </div>
         </section>
-    </section>
 
+        <section class="base--promo">
+            <div class="base--promo--gauche">
+                <img class="base--promo--gauche__img" src="Images/img_base.png">
+            </div>
 
-    <footer>
+            <div class="base--promo--droite">
+                <h1 class="base--promo--droite__title">One More Friend</h1>
+                <h2 class="base--promo--droite__subtitle">Thousands More Fun !</h2>
+                <p class="base--promo--droite__description">Having a pets means you have more joy, a new friend, a happy person who will always be with you to have fun. We have 200+ different pets that can meet your needs !</p>
+                <div class="base--promo--droite--button">
+                    <button class="base--promo--droite--button__view">View intro<i class="fa-solid fa-circle-play"></i></button>
+                    <button class="base--promo--droite--button__explore">Explore Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="base--article">
+            <div class="base--article--textandbutton">
+                <div class="base--article--textandbutton--text">
+                    <p class="base--article--textandbutton--text__title">You already know </p>
+                    <h3 class="base--article--textandbutton--text__paragraphe">Useful Pets Knowledge</h3>
+                </div>
+                <button class="base--article--textandbutton__button">View more<i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="base--article--allPets">
+                <div class="base--article--allPets--OnePet">
+                    <img class="base--article--allPets--OnePet__img" src="Images/Chien9.png">
+                    <button class="base--article--allPets--OnePet__button">Pet Knowledge</button>
+                    <h3 class="base--article--allPets--OnePet__title">What is a Pomeranian ? How to Identify Pomeranian Dogs</h3>
+                    <p class="base--article--allPets--OnePet__description">The Pomeranian, also known as the Pomeranian (Pom dog), is always in the top of the cutest pets. Not only that, the small, lovely, smart, friendly, and skillful circus dog breed.</p>
+                </div>
+
+                <div class="base--article--allPets--OnePet">
+                    <img class="base--article--allPets--OnePet__img" src="Images/Chien10.png">
+                    <button class="base--article--allPets--OnePet__button">Pet Knowledge</button>
+                    <h3 class="base--article--allPets--OnePet__title">Dog Diet You Need To Know</h3>
+                    <p class="base--article--allPets--OnePet__description">Dividing a dog's diet may seem simple at first, but there are some rules you should know so that your dog can easily absorb the nutrients in the diet. For those who are just starting to raise dogs, especially newborn puppies with relatively weak resistance.</p>
+                </div>
+
+                <div class="base--article--allPets--OnePet">
+                    <img class="base--article--allPets--OnePet__img" src="Images/Chien11.png">
+                    <button class="base--article--allPets--OnePet__button">Pet Knowledge</button>
+                    <h3 class="base--article--allPets--OnePet__title">Why Dogs bite and Destroy Furniture and How to Prevent It Effectively</h3>
+                    <p class="base--article--allPets--OnePet__description">Dog bites are common during development. However, no one wants to see their furniture or important items being bitten by a dog.</p>
+                </div>
+            </div>
+        </section>
+   </section> 
+
+    <footer class="footer">
+        <div class="footer--contact">
+            <h3 class="footer--contact__title">Register Now So You Don't Miss Our Programs</h3>
+            <div class="footer--contact--mail">
+                <input class="footer--contact--mail__input" type="text" placeholder="Enter your Email">
+                <button class="footer--contact--mail__button">Subcribe Now</button>
+            </div>
+        </div>
+        <div class="footer--nav">
+            <ul class="footer--nav--link">
+                <li class="footer--nav--link__item">Home</li>
+                <li class="footer--nav--link__item">Category</li>
+                <li class="footer--nav--link__item">About</li>
+                <li class="footer--nav--link__item">Contact</li>
+            </ul>
+
+            <div class="footer--nav__RS">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+        </div>
+
+        <div class="footer--society">
+            <p class="footer--society__text">© 2022 Monito. All rights reserved.</p>
+
+            <div class="footer--society--logo">
+                <p class="footer--society--logo__title">Monito</p>
+                <p class="footer--society--logo__slogan">Pets for Best</p>
+            </div>
+
+            <div class="footer--society--text">
+                <p class="footer--society--text__paragraphe">Terms of Service</p>
+                <p class="footer--society--text__paragraphe">Privacy Policy</p>
+            </div>
+        </div>
+        
 
     </footer>
 </body>
