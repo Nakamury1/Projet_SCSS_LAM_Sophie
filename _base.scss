@@ -1,0 +1,659 @@
+@use 'variables';
+@use 'mixins';
+@use "sass:color";
+
+body{
+    @include mixins.flexcol;
+    @include mixins.justify_align;
+    font-family: variables.$font-family;
+}
+
+.nav{
+    @include mixins.navbar;
+
+    &__logo{
+        text-align: center;
+        color: variables.$secondary-color;
+
+        &__title{
+            font-family: 'Impact', sans-serif;
+            font-size: 40px;
+        }
+    }
+
+    &__check{
+        font-size: 30px;
+        margin: 18px;
+        display: none;
+    }
+
+    &__list{
+        @include mixins.flexrow;
+
+        &__item{
+            @include mixins.title_block;
+            margin: 20px;
+        }
+    }
+
+    &__searchLogin{
+        @include mixins.flexrow;
+
+        &__search{
+            position: relative;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            width: 70%;
+            margin-right: 20px;
+
+            input{
+                width: 100%;
+                border: none;
+                border-radius: 0 20px 20px 0;
+                outline: none;
+                padding: 15px;
+            }
+    
+            i{
+                border-radius: 20px 0 0 20px;
+                background-color: variables.$tertiary-color;
+                padding: 15px;
+            }
+        }
+
+        &__button{
+            @include mixins.buttonExplore_Login_Subscribe;
+            padding: 0 50px;
+            border-radius: 30px;
+
+            @if color.channel(variables.$primary-color, "lightness", $space: hsl) > 50% {
+                color: #fff;
+            }
+
+            @else {
+                color: variables.$secondary-color;
+                background-color: variables.$tertiary-color;
+                border-color: variables.$secondary-color;
+            }
+        }
+    }
+
+    @media (max-width: variables.$breakpoint-mobile) {
+        display: block;
+        position: relative;
+        padding: 7px 20px;
+
+        &__check{
+            position: absolute;
+            display: block;
+            text-align: center;
+            top: 15px;
+            left: 20px;
+        }
+    
+        &__list{
+            margin-top: 15px;
+            display: none;
+
+            &--active{
+                display: none;
+                text-align: center;
+            }
+        }
+        
+        &__searchLogin{
+            display: flex;
+            flex-direction: column;
+            display: none;
+
+            &__search{
+                width: 100%;
+            }
+
+            &__button{
+                padding: 0;
+                margin: 10px 0;
+            }
+        }
+    
+    }
+
+}
+
+.header{
+    @include mixins.flexrow;
+    background: linear-gradient(#fceed5, #fceed5, #ffe7ba);
+    width: variables.$width;
+    padding: 70px 100px 0 100px;
+
+    &__gauche{
+        @include mixins.flexcol;
+        justify-content: start;
+        margin-left: 50px;
+
+        &__title{
+            @include mixins.titleOneMoreFriend;
+        }
+
+        &__subtitle{
+            @include mixins.titleThousandsMoreFun;
+        }
+
+        &__description{
+            font-size: 14px;
+            margin: 30px 30px 30px 0;
+        }
+
+        &__button{
+            margin: 10px 0;
+
+            &__view{
+                @include mixins.buttonMore_Intro;
+                margin-right: 20px;
+
+                i{
+                    @include mixins.icon;
+                }
+            }
+
+            &__explore{
+                @include mixins.buttonExplore_Login_Subscribe;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__droite{
+        &__img{
+            width: 675px;
+            height: 675px;
+            margin: 0 10px;
+        }
+    }
+
+    @media (max-width: variables.$breakpoint-mobile) {
+        @include mixins.flexcol;
+        justify-content: start;
+
+
+        &__gauche{
+            margin-left: 0;
+            &__title{
+                font-size: 35px;
+            }
+    
+            &__subtitle{
+                font-size: 25px;
+            }
+    
+            &__description{
+                font-size: 14px;
+                margin: 30px 30px 30px 0;
+            }
+
+            &__button{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+        &__droite{
+            display: flex;
+            justify-content: center;
+
+            &__img{
+                width: 400px;
+                height: 350px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.base{
+    @include mixins.flexcol;
+    margin: 20px 100px 0 100px;
+
+    &__pets{
+        padding: 5px 15px;
+        background-color: variables.$tertiary-color;
+        border-radius: variables.$border-radius;
+        
+        &__textandbutton{
+            @include mixins.flexrowBetween;
+            margin: 40px 80px 0 80px;
+    
+            &__text{
+                &__paragraphe{
+                    @include mixins.title_block;
+                }
+            }
+    
+            &__button{
+                @include mixins.buttonMore_Intro;
+                
+                i{
+                    @include mixins.icon;
+                }     
+            }
+
+            @media (max-width: variables.$breakpoint-mobile) {
+                margin: 0;
+                justify-content: space-around;
+            }
+        }
+    
+        &__allPets{
+            @include mixins.flexrow;
+            @include mixins.justify_align;
+            
+            &__TwoPets{
+                @include mixins.flexrow;
+                @include mixins.justify_align;
+
+                &__OnePet{
+                    flex-direction: column;
+                    border: 0;
+                    padding: 10px;
+                    margin: 20px;
+                    border-radius: variables.$border-radius;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        
+                    &__img{
+                        width: 260px;
+                        height: 260px;
+                        border-radius: variables.$border-radius;
+                    }
+        
+                    &__text{
+                        padding: 5px;
+        
+                        &__title{
+                            font-size: 15px;
+                        }
+        
+                        &__description{
+                            @include mixins.flexrow;
+                            opacity: 0.6;
+        
+                            &__type{
+                                margin: 5px 0;
+        
+                                &__point{
+                                    font-weight: variables.$font-weight;
+                                    font-size: 20px;
+                                    margin: 0 10px;
+                                }
+                            }
+                        }
+        
+                        &__prix{
+                            font-weight: variables.$font-weight;
+                        }
+                    }
+                }
+
+                @media (max-width: variables.$breakpoint-mobile) {
+                    @include mixins.flexcol;
+                    
+                    &__OnePet{
+            
+                        &__img{
+                            width: 200px;
+                            height: 200px;
+                            border-radius: variables.$border-radius;
+                        }
+        
+                        &__text{
+                            padding: 5px;
+            
+                            &__title{
+                                font-size: 10px;
+                            }
+            
+                            &__description{
+                                @include mixins.flexrow;
+                                opacity: 0.6;
+                                font-size: 10px;
+            
+                                &__type{
+                                    margin: 5px 0;
+            
+                                    &__point{
+                                        font-weight: variables.$font-weight;
+                                        font-size: 10px;
+                                        margin: 0 10px;
+                                    }
+                                }
+                            }
+        
+                            &__prix{
+                                font-weight: variables.$font-weight;
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+            }    
+        }    
+    }
+    
+    &__promo{
+        @include mixins.flexrow;
+        background-color: variables.$primary-color;
+        border-radius: variables.$border-radius;
+        margin: 40px 80px;
+        padding: 30px 30px 0 30px;
+
+        &__gauche{
+            &__img{
+                width: 400px;
+                height: 300px;
+                margin: 0 100px;
+            }
+        }
+
+        &__droite{
+            text-align: end;
+            margin-right: 50px;
+            @include mixins.flexcol;
+            justify-content: start;
+
+            &__title{
+                @include mixins.titleOneMoreFriend;
+            }
+    
+            &__subtitle{
+                @include mixins.titleThousandsMoreFun;
+            }
+
+            &__description{
+                font-size: 14px;
+                margin: 30px 0 30px 30px;
+            }
+
+            &__button{
+                margin: 10px 0;
+
+                &__view{
+                    @include mixins.buttonMore_Intro;
+                    margin-left: 20px;
+
+                    i{
+                        @include mixins.icon;
+                    }
+                }
+
+                &__explore{
+                    @include mixins.buttonExplore_Login_Subscribe;
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        @media (max-width: variables.$breakpoint-mobile) {
+            flex-direction: column-reverse;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            border-radius: 0;
+
+            &__gauche{
+                &__img{
+                    width: 250px;
+                    height: 200px;
+                    margin: 0;
+                }
+            }
+            
+            &__droite{
+                text-align: center;
+                margin-right: 0;
+                justify-content: center;
+
+                &__title{
+                    font-size: 40px;
+                }
+        
+                &__subtitle{
+                    font-size: 30px;
+                }
+
+                &__description{
+                    font-size: 15px;
+                    padding: 0 60px;
+                    margin: 0;  
+                }
+
+                &__button{
+                    margin: 10px 0;
+    
+                    &__view{
+                        margin-left: 0;
+                    }
+    
+                    &__explore{
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &__article{
+        padding: 5px 15px;
+        background-color: variables.$tertiary-color;
+        border-radius: variables.$border-radius;
+        
+        &__textandbutton{
+            @include mixins.flexrowBetween;
+            margin: 40px 80px 0 80px;
+    
+            &__text{
+                &__paragraphe{
+                    @include mixins.title_block;
+                }
+            }
+    
+            &__button{
+                @include mixins.buttonMore_Intro;
+                
+                i{
+                    @include mixins.icon;
+                }     
+            }
+        }
+    
+        &__allPets{
+            @include mixins.flexrow;
+            margin: 20px 50px 50px 50px;
+    
+            &__OnePet{
+                flex-direction: column;
+                border: 0;
+                border-radius: variables.$border-radius;
+                padding: 10px;
+                margin: 0 25px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+                &__title{
+                    margin: 5px 0;
+                }
+            
+                &__description{
+                    margin: 5px 0;
+                }
+    
+                &__img{
+                    display: flex;
+                    @include mixins.justify_align;
+                    width: 350px;
+                    height: 200px;
+                    border-radius: variables.$border-radius;
+                    @media (max-width: variables.$breakpoint-mobile) {
+                        width: 400px;
+                        height: 250px;
+                    }
+
+                }
+
+                &__button{
+                    margin: 15px 0 5px 0;
+                    padding: 5px 15px;
+                    background-color: variables.$quaternary-color;
+                    border-radius: variables.$border-radius;
+                    border: 0;
+                    color: variables.$tertiary-color;
+                }
+            }
+
+            @media (max-width: variables.$breakpoint-mobile) {
+                @include mixins.flexcol;
+            }
+        }
+
+        @media (max-width: variables.$breakpoint-mobile) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0;
+        }
+    }
+
+}
+
+.footer{
+    @include mixins.flexcolBetween;
+    background-color: variables.$primary-color;
+    width: variables.$width;
+    padding-bottom: 20px;
+
+    &__contact{
+        @include mixins.flexrow;
+        @include mixins.justify_align;
+        border-radius: 10px;
+        background-color: variables.$secondary-color;
+        color: variables.$tertiary-color;
+        margin: 40px 150px;
+        padding: 30px;
+
+        &__mail{
+            border-radius: 10px;
+            border: 1px solid;
+            background-color: variables.$tertiary-color;
+            padding: 10px;
+            width: 100%;
+            margin: 0 20px;
+
+            &__input{
+                border-radius: 10px;
+                width: 80%;
+                padding: 10px;
+            }
+
+            &__button{
+                @include mixins.buttonExplore_Login_Subscribe;
+                border-radius: 10px;
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: variables.$breakpoint-mobile) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 20px 50px;
+
+           &__mail{
+            margin-top: 10px;
+
+                &__input{
+                    border-radius: 10px;
+                    padding: 10px;
+                    width: 100%;
+                }
+
+                &__button{
+                    width: 100%;
+                    margin: 10px 0 0 0;
+                }
+           }
+        }
+
+    }
+
+    &__nav{
+        @include mixins.navbar;
+        margin: 10px 0;
+        padding: 30px;
+        border-bottom: 1px solid gray;
+
+        &__list{
+            @include mixins.flexrow;
+            margin-right: 130px;
+
+            &__item{
+                @include mixins.title_block;
+                margin: 0 30px;
+            }
+        }
+
+        &__RS{
+            margin-left: 130px;
+
+            i{
+                width: 50px;
+                height: 50px;
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: variables.$breakpoint-mobile) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__list{
+                margin-right: 0;
+            }
+
+            &__RS{
+                margin-left: 0;
+                margin: 20px 0;
+
+                i{
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &__society{
+        @include mixins.flexrowBetween;
+        align-items: center;
+        padding: 20px 150px;
+
+        &__logo{
+            text-align: center;
+        }
+
+        &__text{
+            @include mixins.flexrow;
+
+            &__paragraphe{
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: variables.$breakpoint-mobile) {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+
+        }
+    }
+
+   
+}

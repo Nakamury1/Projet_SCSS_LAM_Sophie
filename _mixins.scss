@@ -1,0 +1,75 @@
+@use 'variables';
+
+@mixin flexcol{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexrow{
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flexrowBetween{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@mixin flexcolBetween{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@mixin justify_align{
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: variables.$primary-color;
+    width: variables.$width;
+    padding-top: 12px;
+}
+
+@mixin buttonExplore_Login_Subscribe{
+    padding: 10px 20px;
+    border-radius: variables.$border-radius;
+    border: 2px solid variables.$secondary-color;
+    color: variables.$tertiary-color;
+    background-color: variables.$secondary-color;
+}
+
+@mixin buttonMore_Intro{
+    padding: 10px 20px;
+    border-radius: variables.$border-radius;
+    border: 2px solid variables.$secondary-color;
+    color: variables.$secondary-color;
+    background-color: transparent;
+}
+
+@mixin icon{
+    margin: 0 5px;
+}
+
+@mixin title_block{
+    margin: variables.$margin;
+    color: variables.$secondary-color;
+    font-weight: variables.$font-weight;
+}
+
+@mixin titleOneMoreFriend{
+    margin: variables.$margin;
+    color: variables.$secondary-color;
+    font-size: 50px;
+}
+
+@mixin titleThousandsMoreFun{
+    margin: variables.$margin;
+    color: variables.$secondary-color;
+    font-size: 35px;
+}
